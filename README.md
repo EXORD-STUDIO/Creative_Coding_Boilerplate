@@ -1,6 +1,6 @@
 # Creative Coding Boilerplate
 
-Built by [Fokarr]((https://github.com/Fokarr) and used by [EXØRD](https://exord.de)
+Built by [Fokarr](https://github.com/Fokarr) and used by [EXØRD](https://exord.de)
 
 This repository contains a Creative Coding Boilerplate, which serves as a starting point for creating interactive and visually appealing projects using various creative coding frameworks and libraries. It provides a structured foundation and helpful utilities to simplify the development process.
 
