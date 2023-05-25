@@ -5,9 +5,10 @@ import initializeLinkAnimations from "./links";
 
 async function initializeAnimations()  {
     initializePageTransition();
+    // base delay of pagetransition 
     initializeHeadingAnimation();
-    initializeLinkAnimations();
     initializeLogoAnimation();
+    initializeLinkAnimations();
 }
 
 export default initializeAnimations;
