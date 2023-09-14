@@ -5,7 +5,7 @@
     "type": "module",
     "scripts": {
         "dev": "vite build --watch & npx tailwindcss -i ./src/main.css -o ./dist/output.css --watch & nodemon app.js",
-        "build": "vite build",
+        "build": "vite build & npx tailwindcss -i ./src/main.css -o ./dist/output.css",
         "start": "node app.js",
         "preview": "vite preview",
         "format": "prettier . --write"

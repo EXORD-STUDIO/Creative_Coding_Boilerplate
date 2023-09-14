@@ -1,0 +1,36 @@
+name: Deploy to DigitalOcean Droplet
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '18.17'
+
+    - name: SSH and Deploy
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.DROPLET_IP_ADDRESS }}
+        username: ${{ secrets.DROPLET_USERNAME }}
+        key: ${{ secrets.DROPLET_SSH_PRIVATE_KEY }}
+        passphrase: ${{ secrets.SSH_KEY_PASSPHRASE }}
+        script: |
+          cd ${{ secrets.ROUTE }}
+          git config --global credential.helper 'store --file .git-credentials'
+          echo "https://${{ secrets.GIT_USERNAME }}:${{ secrets.GIT_PASSWORD }}" > .git-credentials
+          git pull
+          export NVM_DIR=~/.nvm
+          source ~/.nvm/nvm.sh
+          npm run build
+          pm2 restart ${{ secrets.PM2_ID }}
