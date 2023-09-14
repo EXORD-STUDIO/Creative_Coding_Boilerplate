@@ -1,3 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .link {
+      transition: all 0.3s ease-in-out;
+      position: relative;
+
+      &:hover {
+        cursor: pointer;
+        color: theme('colors.red');
+
+        &::after {
+            width: 100%;            
+        }
+      }
+
+      &::after {
+        transition: all 0.3s ease-in-out;
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        width: 0px;
+        height: 2px;
+        background-color: theme('colors.red');
+      }
+    }
+}
+
 // https://piccalil.li/blog/a-modern-css-reset
 
 /* Box sizing rules */

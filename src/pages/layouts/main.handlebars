@@ -4,15 +4,15 @@
     <meta charset="utf-8">
     <title>Creative Coding Boilerplate</title>
 
-    <script async src="/public/dist/main.js"></script>
-    <link rel="stylesheet" href="/public/dist/index.css">
+    <script async src="../../../dist/main.js"></script>
+    <link rel="stylesheet" href="../../../dist/output.css">
 </head>
 <body data-barba="wrapper">
 
     <!-- put here content that will not change between your pages, like <header> or <nav> -->
 
-    <div id="pagetransition"></div>
-    <main class="wrapper" data-barba="container">
+    <div class="w-screen h-screen absolute left-0 bottom-0 z-50 -translate-y-full bg-red" id="pagetransition"></div>
+    <main class="flex flex-col mt-10 items-center justify-between text-center h-[90vh]" data-barba="container">
         {{{body}}}
     </main>
     

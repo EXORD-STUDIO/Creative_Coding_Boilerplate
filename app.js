@@ -17,17 +17,21 @@ const hbs = create({
 });
 
 // handlebars
-app.engine('handlebars', engine());
+app.set('views', path.join(__dirname, './src/pages'));
+app.engine('handlebars', engine({ 
+  layoutsDir: path.join(__dirname, './src/pages/layouts'), // Pfad für Layouts, relativ zu __dirname
+  partialsDir: path.join(__dirname, './src/components'),
+}));
 app.set('view engine', 'handlebars');
-app.set('views', './src/views');
 app.use("/public", express.static(path.join(__dirname, "./public")));
+app.use("/dist", express.static(path.join(__dirname, "./dist")));
 
 app.get("/", (req, res) => {
   res.render("home", { title: "Creative Coding Boilerplate by" });
 })
 
 app.get("/contact", (req, res) => {
-  res.render("contact/home", { title: "Contact us at:" });
+  res.render("contact/contact", { title: "Contact us at:" });
 })
 
 app.listen(port, () => {
