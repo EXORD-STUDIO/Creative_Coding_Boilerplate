@@ -5,7 +5,7 @@ import initializePageTransition from "./helper/page";
 import initializeLinkAnimations from "./components/links/links";
 
 async function initializeAnimations() {
-    console.log("Made by Exord")
+    console.log("Made by Exord2")
     initializePageTransition();
     // base delay of pagetransition
     initializeHeadingAnimation();
