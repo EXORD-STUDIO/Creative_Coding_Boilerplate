@@ -1,5 +1,3 @@
 export const referencesApiManager = {
-    getReferences: async() => {
-        
-    }
-}
+    getReferences: async () => {},
+};

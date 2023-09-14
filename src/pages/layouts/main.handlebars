@@ -1,22 +1,27 @@
-<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <title>Creative Coding Boilerplate</title>
+    <head>
+        <meta charset="utf-8" />
+        <title>Creative Coding Boilerplate</title>
 
-    <script async src="../../../dist/main.js"></script>
-    <link rel="stylesheet" href="../../../dist/output.css">
-</head>
-<body data-barba="wrapper">
+        <script async src="../../../dist/main.js"></script>
+        <link rel="stylesheet" href="../../../dist/output.css" />
+    </head>
+    <body data-barba="wrapper">
 
-    <!-- put here content that will not change between your pages, like <header> or <nav> -->
+        <!-- put here content that will not change between your pages, like <header> or <nav> -->
 
-    <div class="w-screen h-screen absolute left-0 bottom-0 z-50 -translate-y-full bg-red" id="pagetransition"></div>
-    <main class="flex flex-col mt-10 items-center justify-between text-center h-[90vh]" data-barba="container">
-        {{{body}}}
-    </main>
-    
-    <!-- put here content that will not change between your pages, like <footer> -->
+        <div
+            class="w-screen h-screen absolute left-0 bottom-0 z-50 -translate-y-full bg-red"
+            id="pagetransition"
+        ></div>
+        <main
+            class="flex flex-col mt-10 items-center justify-between text-center h-[90vh]"
+            data-barba="container"
+        >
+            {{{body}}}
+        </main>
 
-</body>
+        <!-- put here content that will not change between your pages, like <footer> -->
+
+    </body>
 </html>

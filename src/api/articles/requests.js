@@ -1,5 +1,3 @@
 export const articlesApiManager = {
-    getArticles: async() => {
-        
-    }
-}
+    getArticles: async () => {},
+};
